@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "PWA UI tester",
+    "short_name": "PWA UI tester",
+    "display": "standalone",
+    "start_url": ".",
+    "icons": [
+        {
+          "src": "pwa.png",
+          "sizes": "320x320",
+          "type": "image/png"
+        }
+    ]
+  }

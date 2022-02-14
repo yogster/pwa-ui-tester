@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang=en>
+    <head>
+        <meta charset=utf-8>
+        <link rel="manifest" href="manifest.json">
+        <title>PWA UI Tester</title>
+        <script>
+            if('serviceWorker' in navigator) {
+                navigator.serviceWorker
+                    .register('/service-worker.js')
+                    .then(function() { console.log("Service Worker Registered"); });
+            }
+        </script>
+    </head>
+    <body>
+        <p>This PWA has been set up to reproduce <a href="https://bugs.webkit.org/show_bug.cgi?id=235891">Webkit Bug 235891: Native keyboard, select list and file selector not displaying in iPad PWA</a></p>
+        <form action="" method="post">
+            <p>
+                <label for="textInput">Text input</label>
+                <input id="textInput" name="textInput" type="text">
+            </p>
+            <p>
+                <label for="selectField">Select</label>
+                <select id="selectField" name="selectField">\
+                    <option value="">Please choose an option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </p>
+            <p>
+                <label for="fileInput">File input</label>
+                <input id="fileInput" name="fileInput" type="file">
+            </p>
+            <p>
+                <input type="submit">
+            </p>
+        </form>
+    </body>
+</html>
